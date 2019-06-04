@@ -27,7 +27,7 @@ class HomePage extends React.Component {
     componentDidMount() {
         let here = this;
         console.log('CDM', localStorage.getItem('loggedIn'))
-        if (localStorage.getItem('loggedIn') === "false") {
+        if (localStorage.getItem('loggedIn') !== "false") {
             this.props.history.push('/login');
         }
 
