@@ -26,7 +26,6 @@ class HomePage extends React.Component {
 
     componentDidMount() {
         let here = this;
-        console.log('CDM', localStorage.getItem('loggedIn'))
         if (localStorage.getItem('loggedIn') !== "true") {
             this.props.history.push('/login');
         }
@@ -36,7 +35,6 @@ class HomePage extends React.Component {
             firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
                 here.setState(snapshot.val());
                 here.setState({ loading: false });
-                console.log(here.state);
             })
         },
             1000);
