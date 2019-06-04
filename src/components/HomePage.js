@@ -27,7 +27,7 @@ class HomePage extends React.Component {
     componentDidMount() {
         let here = this;
         console.log('CDM', localStorage.getItem('loggedIn'))
-        if (localStorage.getItem('loggedIn') !== "false") {
+        if (localStorage.getItem('loggedIn') !== "true") {
             this.props.history.push('/login');
         }
 
@@ -39,7 +39,7 @@ class HomePage extends React.Component {
                 console.log(here.state);
             })
         },
-            2000);
+            1000);
 
 
     }
