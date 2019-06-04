@@ -37,7 +37,7 @@ class HomePage extends React.Component {
                 here.setState({ loading: false });
             })
         },
-            1000);
+            2000);
 
 
     }
